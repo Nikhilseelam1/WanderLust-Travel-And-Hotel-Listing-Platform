@@ -1,6 +1,6 @@
-# WanderLust
+# WanderLust-Travel & Hotel Listing Platform
 
-**WanderLust** is a full-stack web application inspired by Airbnb that allows users to explore, create, and manage travel listings. It supports user authentication, image uploads, reviews, and secure CRUD operations — providing a real-world MERN stack experience. :contentReference[oaicite:0]{index=0}
+**WanderLust** is a full-stack web application inspired by Airbnb that allows users to explore, create, and manage travel listings. It supports user authentication, image uploads, reviews, and secure CRUD operations — providing a real-world MERN stack experience.
 
 ##  Problem Motivation
 
@@ -23,7 +23,7 @@ The application should be scalable, secure, and easy to use while following mode
 
 ---
 
-## 💡 Solution
+##  Solution
 
 **WanderLust** is a MERN stack–based web application inspired by Airbnb that solves the above problem by providing:
 
@@ -60,6 +60,21 @@ The application follows MVC architecture on the backend and modular component-ba
 - Git & GitHub (version control)
 
 ---
+### Inference (Application Workflow)
+
+The inference process describes how the application processes user requests and delivers responses:
+
+1. The user interacts with the frontend (e.g., browsing listings, adding reviews).
+2. Requests are sent from the React frontend to the Express backend via REST APIs.
+3. The backend validates user authentication and permissions.
+4. Data is fetched from or stored in MongoDB using Mongoose.
+5. Uploaded images are processed and stored using a cloud storage service.
+6. The processed response is returned to the frontend and displayed to the user in real time.
+
+This flow ensures a smooth and secure user experience while maintaining efficient data handling across the application.
+
+---
+
 
 ##  Future Enhancements
 
@@ -72,7 +87,6 @@ The application follows MVC architecture on the backend and modular component-ba
 -  Recommendation system based on user behavior
 -  Full cloud deployment with CI/CD pipeline
 
--  
 
 ---
 
