@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
@@ -24,7 +25,7 @@ main().then(() => {
 });
 
 async function main(){
-    await mongoose.connect("mongodb://127.0.0.1:27017/wanderlust");
+    await mongoose.connect(process.env.ATLASDB_URL);
 }
 
 app.set("view engine", "ejs");
@@ -42,7 +43,7 @@ const store = MongoStore.create({
     touchAfter: 24 * 3600,
 });
 
-store.on("error", () => {
+store.on("error", (err) => {
     console.log("ERROR IN MONGO SESSION STORE", err);
 })
 
